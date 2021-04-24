@@ -7,7 +7,8 @@ const params = fileName => {
     const imageParams = {
       Bucket: 'user-images-f0c29599-0904-4e80-8048-6b378d53c7dd',
       Key: `${uuidv4()}.${fileType}`,
-      Body: fileName.buffer
+      Body: fileName.buffer,
+      ACL: 'public-read'
     };
   
     return imageParams;
